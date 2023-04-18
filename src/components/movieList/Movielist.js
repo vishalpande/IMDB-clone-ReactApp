@@ -4,10 +4,11 @@
 import React, {useEffect, useState} from "react"
 import "./Movielist.css"
 import { useParams } from "react-router-dom"
-import Card from "../components/cards/Card"
+import Card from "../cards/Card";
 
-const Movielist = () => {
-    
+
+
+export default function Movielist() {
     const [Movielist, setMovielist] = useState([])
     const {type} = useParams()
 
@@ -25,8 +26,8 @@ const Movielist = () => {
         .then(data => setMovielist(data.results))
     }
 
-    return (
-        <div className="movie__list">
+  return (
+    <div className="movie__list">
             <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
             <div className="list__cards">
                 {
@@ -36,7 +37,15 @@ const Movielist = () => {
                 }
             </div>
         </div>
-    )
+  )
 }
 
-export default Movielist
+
+
+
+
+
+
+
+
+
