@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from "react"
-import "./movie.css"
-import { useParams } from "react-router-dom"
+import React from 'react';
 
-const Movie = () => {
+import {useEffect, useState} from "react";
+import "./movie.css";
+import { useParams } from "react-router-dom";
+
+const MovieDetail = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
 
@@ -87,4 +89,4 @@ const Movie = () => {
     )
 }
 
-export default Movie
+export default MovieDetail
